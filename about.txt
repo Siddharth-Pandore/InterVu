@@ -1,0 +1,98 @@
+//SECTION - Initializing Project "InterVu"
+1) npx create-next-app@14.2.23 .
+   TypeScript => Y
+   ESLint     => N
+   Tailwind   => Y
+   src/direct => Y
+   App Router => Y
+   import ali => N
+
+//SECTION - ShadCn for components   
+1) npx shadcn@latest init
+   New York
+   Neutral
+   yes
+
+2) npx shadcn@latest add button card
+
+//SECTION - Initializing Auhentication
+1)  npm install @clerk/nextjs
+2)  Copy & Paste the .env.local's Public and Secret key in similar file.
+3)  Copy & Paste the middleware.ts file and paste inside the src folder in the similar file.
+4)  Wrap the whole application (layout.tsx) in <ClerkProvider> component
+5)  Happy Sign in!
+
+//SECTION - ConvexDB Initializing
+1)  npm i convex ("For installation")
+2)  npx convex dev ("For running")
+
+//SECTION - Get Stream for video calling feature.
+1)  Sign Up => Create App => App Name(InterVu) => Development 
+2)  Copy the api key => .env.local => NEXT_PUBLIC_STREAM_API_KEY=("api key")
+3)  Copy the secret key -----'''''--- STREAM_SECRET_KEY=("secret key")
+
+   Importing Video call SDK
+   //For CLIENT
+        npm i @stream-io/video-react-sdk
+
+   //For SERVER
+        npm i @stream-io/node-sdk
+
+4)  clerk => jwt template => + => convex => Copy the (Issuer) and save.
+5)  Copy and & Paste the (auth.config.ts) file inside "convex" folder.
+6)  Inside the domain paste the (Issuer url).
+7)  Create a folder(providers) under (components) and create a file
+    ConvexClerkProvider.tsx
+    => const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+8)  Make the component as "use client"
+9)  In the layout.tsx => change "ClerkProvider" to "ConvexClerkProvider".    
+
+/////////////// WEB HOOKS /////////////////
+Automated message that are sent when something happens
+
+10)  Clerk => webhooks => Add Endpoint
+11)  Paste => https://abundant-marlin-92.convex.site/clerk-webhook
+     & select (user.created) event. Save.
+12)  Copy the Signing Secret Key.    
+13)  Convex => Settings => Environmental Variables => Add =>
+     CLERK_WEBHOOK_SECRET="signing secret key" 
+14)  create a file "http.ts" under Convex folder.     
+
+15)  npm i svix
+
+
+//SECTION - Navbar Building
+1)   npm install next-themes
+2)   npx shadcn@latest add dropdown-menu (for Dark/Light mode toggle)
+3)   To change the theme color => shadcn => themes=>customize=> select the desire
+     color("green")=> copy the Code => replace inside the globals.css
+
+//SECTION - Home UI
+1)   npx shadcn@latest add dialog     
+
+//SECTION - Stream Video Call SetUp
+1)   npx shadcn@latest add npx shadcn@latest add switch
+
+//SECTION - Meeting room page
+1)   npx shadcn@latest add resizable
+
+//SECTION - For Code Editor
+1)   npm i @monaco-editor/react
+2)   npx shadcn@latest add scroll-area select
+
+//SECTION - Recordings page
+1)   npm i date-fns
+
+//SECTION - Schedule page
+   InterviewScheduleUI
+   1)     npx shadcn@latest add textarea
+   2)     
+
+//SECTION - MeetingCard
+1)   npx shadcn@latest add badge   
+
+//SECTION - Dashboard page
+1)   
+
+//SECTION - CommnetDialog
+1    npx shadcn@latest add label
