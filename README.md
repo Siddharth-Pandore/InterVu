@@ -1,4 +1,5 @@
-# InterVu - A Video Calling Interview Platform
+#             InterVu
+# A Video Calling Interview Platform
 
 ![InterVu](https://github.com/user-attachments/assets/36e5071e-f888-4046-8064-ce8d883dd129)
 
